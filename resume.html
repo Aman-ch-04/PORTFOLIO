@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aman Choudhary | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: linear-gradient(to bottom, #f0f4ff, #ffffff); color: #333; padding: 20px; }
+    nav {
+      position: sticky;
+      top: 0;
+      background: #ffffff;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      z-index: 100;
+      animation: fadeInDown 1s ease-in-out;
+    }
+    nav a {
+      color: #0f62fe;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, #0f62fe, #4f8cff);
+      color: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      object-fit: cover;
+      animation: zoomIn 1s ease-in-out;
+    }
+    header h1 { font-size: 3rem; }
+    header p { font-size: 1.25rem; margin-top: 0.5rem; }
+    a { text-decoration: none; transition: 0.3s ease; }
+    a:hover { opacity: 0.8; }
+    section {
+      margin-top: 2rem;
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    section:hover { transform: translateY(-5px); }
+    h2 {
+      color: #0f62fe;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #0f62fe;
+      padding-left: 10px;
+    }
+    ul { list-style: none; padding-left: 0; }
+    ul li { margin-bottom: 0.75rem; line-height: 1.6; }
+    .contact a { color: #0f62fe; text-decoration: none; }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .skills-grid div {
+      background: #f1f6ff;
+      padding: 10px 15px;
+      border-radius: 12px;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .resume-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 10px 20px;
+      background: #0f62fe;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .blog-section article {
+      margin-bottom: 1.5rem;
+    }
+    .blog-section h3 {
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      header p { font-size: 1rem; }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes zoomIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#education">Education & Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="#blog">Blog</a>
+  </nav>
+
+  <header id="home">
+    <img src="https://raw.githubusercontent.com/Aman-ch-04/PORTFOLIO/9da17824bcdd6683315f6d4a4716532704d53931/resume%20photo%20.png" alt="Profile Photo" />
+    <h1>Aman Choudhary</h1>
+    <p>Computer Science Student | DevOps & Cloud Enthusiast</p>
+    <a href="#" class="resume-btn">Download Resume</a>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm a passionate and detail-oriented Computer Science student focused on Software Development, DevOps, and Cloud Computing. I enjoy building scalable applications and solving real-world problems through code.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education & Skills</h2>
+    <p><strong>B.Tech in Computer Science</strong> – JIET College of Engineering, Jodhpur (2023 – 2027)<br />
+    CGPA: 8.0 / 10</p>
+    <div class="skills-grid">
+      <div><strong>Languages:</strong> C++, Python, JavaScript</div>
+      <div><strong>Web:</strong> HTML5, CSS3, React (Basics), AJAX</div>
+      <div><strong>Tools:</strong> Git, GitHub, Linux, VMware, Ubuntu</div>
+      <div><strong>DevOps:</strong> Docker, Kubernetes (Basics), AWS EC2</div>
+      <div><strong>Database:</strong> MySQL</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>MindSpace – Mental Wellness Tracker</strong><br />
+        Full Stack Web App using React, Node.js, MongoDB. AI-based sentiment analysis and mood visualization with Chart.js.
+      </li>
+      <li><strong>Distance Vector Routing Protocol Simulator</strong><br />
+        Python CLI-based network simulator implementing dynamic Distance Vector Algorithm.
+      </li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="#">aman.choudhary2905@gmail.com</a></p>
+    <p>GitHub: <a href="#">https://github.com/Aman-ch-04</a></p>
+    <p>LinkedIn: <a href="#">https://www.linkedin.com/in/aman-choudhary-785912290/</a></p>
+  </section>
+
+  <section id="blog" class="blog-section">
+    <h2>Blog</h2>
+    <article>
+      <h3>🚀 Getting Started with Docker</h3>
+      <p>A short intro to how containers simplify development and deployment.</p>
+    </article>
+    <article>
+      <h3>💻 Building Projects with React</h3>
+      <p>My journey creating interactive UIs and integrating APIs.</p>
+    </article>
+  </section>
+</body>
+</html>
